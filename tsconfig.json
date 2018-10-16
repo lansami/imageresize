@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target":"es6",
+        "esModuleInterop": true,
+        "module":"commonjs",
+        "outDir":"./dist",
+        "pretty":true,
+        "sourceMap": true,
+        "resolveJsonModule":true
+    },
+    "files": [
+        "./node_modules/@types/mocha/index.d.ts",
+        "./node_modules/@types/node/index.d.ts"
+    ],
+    "include":[
+        "src/**/*.ts",
+        "src/views/*.ejs"
+    ],
+    "exclude": [
+        "node_modules",
+        "src/resources/imageResizedStats.json"
+    ]
+    
+}
