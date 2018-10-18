@@ -9,7 +9,7 @@ export class ImageResizeStats{
     public route(app):void {
         app.route('/').get((req:Request, res: Response) => {
             ImageStats.getStats().then((stats) => {
-                res.render('stats',stats);
+                res.render('stats',JSON.parse(stats));
             }).catch((err) => { console.error(err); });
         })
 
