@@ -37,11 +37,7 @@ const _ = require('underscore');
         this.syncStats().then(() => {
             console.log('Increased the number of resized images');
             this.numberOfResizedImages++;
-            return new Promise<void>((resolve, reject)=> {
-                resolve();
-            });
-        }).then(() => {
-            return this.saveStats();
+            this.saveStats();
         }).catch((err) => { console.log('Error when increasing the number of resized images\n'+err);})
     }
 
@@ -52,11 +48,7 @@ const _ = require('underscore');
         this.syncStats().then(()=>{
             console.log('Increased the number of cached hits');
             this.numberOfCachedHits++;
-            return new Promise<void>((resolve, reject) => {
-                resolve();
-            });
-        }).then(() => {
-            return this.saveStats();
+            this.saveStats();
         }).catch((err) => { console.log('Error when increasing the number of cached hits \n'+err);})
     }
 
@@ -67,12 +59,7 @@ const _ = require('underscore');
         this.syncStats().then(() => {
             console.log('Increased the number of cached miss');
             this.numberOfCachedMiss++;
-            return new Promise<void>((resolve, reject) => {
-                resolve();
-            });
-        }).then(() => {
-            return this.saveStats();
-        
+            this.saveStats();
         }).catch((err) => { console.log('Error when increasing the number of cached miss \n'+err);})
     }
 
