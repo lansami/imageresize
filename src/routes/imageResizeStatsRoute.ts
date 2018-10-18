@@ -15,7 +15,7 @@ export class ImageResizeStats{
 
         app.route('/stats').get((req:Request, res: Response) => {
             ImageStats.getStats().then((stats) => {
-                res.json(stats);
+                res.json(JSON.parse(stats));
             }).catch((err) => { console.error(err);});
         })
     }

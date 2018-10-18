@@ -4,7 +4,7 @@ import app from '../src/app'
 import fs from 'fs'
 import path from 'path'
 
-import {AppConfig} from '../src//utils/config'
+import {AppConfig} from '../src/utils/config'
 
 chai.use(chaiHttp);
 
